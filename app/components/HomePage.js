@@ -23,11 +23,11 @@ export default function HomePage() {
           Scroll down to find amazing movie reviews and watchlists
         </p>
       </div>
-      <div className="bg-black m-2 p-2 bor">
+      <div className="bg-black m-2">
         <h1 className="text-3xl mt-5 text-white">Movie Recommendations</h1>
-        <div className="bg-white m-3 flex flex-col h-screen">
+        <div className="m-3 flex flex-col flex-gap-5 text-white bg-black">
           {movies.map((movie, index) => (
-            <MovieCard movie={movie} />
+            <MovieCard movie={movie} key={index} />
           ))}
         </div>
       </div>
